@@ -1,0 +1,7 @@
+<div>
+    <p class="text-center">{{name}}</p>
+    <input type="text"  placeholder="Enter your Name" #nameUser><br>
+    <input type="text"  placeholder="Enter your Username" #usernameUser><br>
+    <input type="password"  placeholder="Enter your Password" #passwordUser><br>
+    <button type="button" class="btn btn-primary" (click)="addUser(nameUser,usernameUser,passwordUser)">Add</button>
+</div>

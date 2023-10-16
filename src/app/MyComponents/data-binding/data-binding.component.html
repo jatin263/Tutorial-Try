@@ -1,0 +1,11 @@
+<div class="mt-3 mb-3 ms-3 me-3">
+    <input type="text" [(ngModel)]="name">
+    <p>{{name}}</p>
+    <button [disabled]="checkUsername()" (click)="setEmptyUsername()" class="btn btn-primary mb-3 mt-3">Check</button>
+
+    <div>
+        <button (click)="btnToggle()" class="btn btn-primary mb-3 mt-3">Click</button>
+        <p *ngIf="getToggleState()">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis sapiente doloremque debitis distinctio, explicabo assumenda nulla itaque consequuntur natus mollitia nisi pariatur officia earum, ab ipsam repudiandae necessitatibus blanditiis molestias.</p>
+        <div *ngFor="let d of countToggle,let i=index" [ngStyle]="{'color': i>5?'red':'green'}" >{{d}}</div>
+    </div>
+</div>

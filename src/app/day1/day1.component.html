@@ -1,0 +1,12 @@
+<h1 class="text-center">Transfering data from one component to another</h1>
+<div class="ms-5 mt-5">
+    <app-data-form (addUSerEvent)='addNewUser($event)'></app-data-form>
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>Username</td>
+            <td>Password</td>
+        </tr>
+    </table>
+    <app-data-view *ngFor="let data of childStr" [Data]="data" ></app-data-view>
+</div>
