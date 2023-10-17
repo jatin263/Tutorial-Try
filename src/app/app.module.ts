@@ -17,8 +17,18 @@ import {DisplayDataComponent } from './MyComponents/trying-data-binding/display-
 import { Day1Component } from './day1/day1.component';
 import { DataViewComponent } from './day1/data-view/data-view.component';
 import { DataFormComponent } from './day1/data-form/data-form.component';
+import { HomeComponent } from './project/home/home.component';
+import { RegisterComponent } from './project/register/register.component';
+import { ProjectComponent } from './project/project.component';
+import { RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from './project/login/login.component';
 
 
+const appRoute:Routes=[
+  {path : '', component:HomeComponent},
+  {path : 'Register',component:RegisterComponent},
+  {path:'Login',component:LoginComponent}
+];
 
 @NgModule({
   declarations: [
@@ -36,12 +46,17 @@ import { DataFormComponent } from './day1/data-form/data-form.component';
     Day1Component,
     DataViewComponent,
     DataFormComponent,
+    HomeComponent,
+    RegisterComponent,
+    ProjectComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(appRoute)
   ],
   providers: [],
   bootstrap: [AppComponent]
